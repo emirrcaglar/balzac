@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/emirrcaglar/balzac/config"
-	"github.com/emirrcaglar/balzac/routes"
+	"balzac/config"
+	"balzac/routes"
 
 	"github.com/gin-gonic/gin"
 )
