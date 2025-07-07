@@ -1,7 +1,8 @@
 package routes
 
 import (
-	"balzac/controllers"
+	"backend/controllers"
+	"backend/middleware"
 
 	"github.com/gin-gonic/gin"
 )

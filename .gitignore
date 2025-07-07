@@ -1,0 +1,8 @@
+# Local database
+balzac.db
+
+# Environment variables
+.env
+
+# Node modules
+node_modules

@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"balzac/utils"
+	"backend/utils"
 
 	"github.com/gin-gonic/gin"
 )
@@ -9,7 +9,8 @@ import (
 func JWTAuth() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		token := c.GetHeader("Authorization")
-		if err := utils.ValidateToken(token); err != nil {
+		_, err := utils.ValidateToken(token)
+		if err != nil {
 			c.AbortWithStatusJSON(401, gin.H{"error": "Unauthorized"})
 			return
 		}
