@@ -1,12 +1,17 @@
 <script lang="ts">
-  // Registration is now handled via Google OAuth.
-  // This page can be removed or repurposed.
+  import { onMount } from 'svelte';
+  import { goto } from 'balzac/frontend/node_modules/@sveltejs/kit/src/runtime/app/navigation';
+
+  onMount(() => {
+    // After successful Google OAuth, the backend redirects to this page.
+    // We can simply redirect to the home page or a dashboard.
+    goto('/');
+  });
 </script>
 
 <div class="container">
-  <h1>Registration</h1>
-  <p>Registration is now handled via Google OAuth. Please use the login page to proceed.</p>
-  <a href="/login">Go to Login</a>
+  <h1>Logging you in...</h1>
+  <p>Please wait while we complete your login.</p>
 </div>
 
 <style>
@@ -28,14 +33,5 @@
   p {
     color: #666;
     margin-bottom: 20px;
-  }
-
-  a {
-    color: #007bff;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
   }
 </style>

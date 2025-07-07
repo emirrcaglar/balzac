@@ -1,7 +1,7 @@
 package db
 
 import (
-	"backend/models"
+	"balzac/models"
 
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
